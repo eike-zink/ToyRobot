@@ -1,17 +1,15 @@
 module toy_robot
 
-
 pub struct Position {
-	mut: 
-		x int
-		y int
+mut:
+	x int
+	y int
 }
 
-
 pub struct Robot {
-	mut: 
-		position Position
-		direction Direction
+mut:
+	position  Position
+	direction Direction
 }
 
 pub fn (mut robot Robot) move() {
@@ -23,15 +21,15 @@ pub fn (mut robot Robot) move() {
 	}
 }
 
-pub fn(mut robot Robot) turn_left() {
+pub fn (mut robot Robot) turn_left() {
 	robot.direction = robot.direction.turn_left()
 }
 
-pub fn(mut robot Robot) turn_right() {
+pub fn (mut robot Robot) turn_right() {
 	robot.direction = robot.direction.turn_right()
 }
 
-pub fn(robot Robot) report() map[string]string {
+pub fn (robot Robot) report() map[string]string {
 	report := {
 		'x': robot.position.x.str()
 		'y': robot.position.y.str()

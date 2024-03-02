@@ -12,10 +12,9 @@ fn (direction Direction) turn_left() Direction {
 		.north { return .west }
 		.west { return .south }
 		.south { return .east }
-		.east { return .north}
+		.east { return .north }
 	}
 }
-
 
 fn (direction Direction) turn_right() Direction {
 	match direction {
