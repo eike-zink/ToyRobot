@@ -88,7 +88,7 @@ fn test_move_4_spaces_south() {
 }
 
 fn test_turn_left() {
-	mut robot := Robot {
+	mut robot := Robot{
 		direction: .north
 	}
 	robot.turn_left()
@@ -102,7 +102,7 @@ fn test_turn_left() {
 }
 
 fn test_turn_right() {
-	mut robot := Robot {
+	mut robot := Robot{
 		direction: .north
 	}
 	robot.turn_right()
@@ -115,3 +115,11 @@ fn test_turn_right() {
 	assert robot.direction == .north
 }
 
+fn test_report() {
+	mut robot := Robot{}
+	assert robot.report() == {
+		'x': '0'
+		'y': '0'
+		'd': 'north'
+	}
+}

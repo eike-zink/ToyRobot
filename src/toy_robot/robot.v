@@ -31,6 +31,15 @@ pub fn(mut robot Robot) turn_right() {
 	robot.direction = robot.direction.turn_right()
 }
 
+pub fn(robot Robot) report() map[string]string {
+	report := {
+		'x': robot.position.x.str()
+		'y': robot.position.y.str()
+		'd': robot.direction.str()
+	}
+	return report
+}
+
 fn (mut robot Robot) move_east() {
 	robot.position.x += 1
 }
