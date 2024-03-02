@@ -101,3 +101,17 @@ fn test_turn_left() {
 	assert robot.direction == .north
 }
 
+fn test_turn_right() {
+	mut robot := Robot {
+		direction: .north
+	}
+	robot.turn_right()
+	assert robot.direction == .east
+	robot.turn_right()
+	assert robot.direction == .south
+	robot.turn_right()
+	assert robot.direction == .west
+	robot.turn_right()
+	assert robot.direction == .north
+}
+

@@ -1,23 +1,6 @@
 module toy_robot
 
 
-pub enum Direction {
-	north
-	south
-	west
-	east
-}
-
-fn (direction Direction) turn_left() Direction {
-	match direction {
-		.north { return .west }
-		.west { return .south }
-		.south { return .east }
-		.east { return .north}
-	}
-}
-
-
 pub struct Position {
 	mut: 
 		x int
@@ -42,6 +25,10 @@ pub fn (mut robot Robot) move() {
 
 pub fn(mut robot Robot) turn_left() {
 	robot.direction = robot.direction.turn_left()
+}
+
+pub fn(mut robot Robot) turn_right() {
+	robot.direction = robot.direction.turn_right()
 }
 
 fn (mut robot Robot) move_east() {
